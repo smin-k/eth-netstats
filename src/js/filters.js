@@ -130,6 +130,10 @@ angular.module('netStatsApp.filters', [])
 	return function(version) {
 		if(version)
 		{
+			if (version.indexOf('/') === -1) {
+				return '';
+			}
+		
 			var tmp = version.split('/');
 
 			tmp[0] = tmp[0].replace('Ethereum(++)', 'Eth');

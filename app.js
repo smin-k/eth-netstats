@@ -101,11 +101,11 @@ Nodes.setChartsCallback(function (err, charts)
 // Init API Socket events
 api.on('connection', function (spark)
 {
-	console.info('API', 'CON', 'Open:', spark.address.ip);
+	console.log('API', 'CON', 'Open:', spark.address.ip);
 
 	spark.on('hello', function (data)
 	{
-		console.info('API', 'CON', 'Hello', data['id']);
+		console.log('API', 'CON', 'Hello', data['id']);
 
 		if( _.isUndefined(data.secret) || WS_SECRET.indexOf(data.secret) === -1 || banned.indexOf(spark.address.ip) >= 0 || _.isUndefined(data.id) || reserved.indexOf(data.id) >= 0 )
 		{
