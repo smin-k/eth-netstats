@@ -1,12 +1,12 @@
-Ethereum Network Stats
+Ethereum Network Stats "Classic"
 ============
-[![Build Status][travis-image]][travis-url] [![dependency status][dep-image]][dep-url]
+Eth-Netstats "Classic" is a visual interface for tracking ethereum network status. It uses WebSockets to receive stats from running nodes and output them through an Angular interface. It is the front-end implementation for [eth-net-intelligence-api](https://github.com/ethereum/eth-net-intelligence-api).
 
-Eth-Netstats is a legacy visual interface for tracking ethereum network status. It uses WebSockets to receive stats from running nodes and output them through an Angular interface. It is the front-end implementation for [eth-net-intelligence-api](https://github.com/cubedro/eth-net-intelligence-api).
+Other implementations of Eth-Netstats can be found at:  
+- [Alethio EthStats](https://github.com/Alethio/ethstats-network-dashboard)
+- [Görli EthStats](https://github.com/goerli/ethstats-server/)
 
-Alternative implementations of Eth-Netstats can be found at [ethstats-server](https://github.com/goerli/ethstats-server/) and [ethstats-network-dashboard](https://github.com/Alethio/ethstats-network-dashboard).
-
-![Screenshot](https://raw.githubusercontent.com/cubedro/eth-netstats/master/src/images/screenshot.jpg?v=0.0.6 "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/ethereum/eth-netstats/master/src/images/screenshot.jpg?v=0.0.6 "Screenshot")
 
 ## Prerequisite
 * node
@@ -18,7 +18,7 @@ Make sure you have node.js and npm installed.
 Clone the repository and install the dependencies
 
 ```bash
-git clone https://github.com/cubedro/eth-netstats
+git clone https://github.com/ethereum/eth-netstats
 cd eth-netstats
 npm install
 sudo npm install -g grunt-cli
@@ -60,7 +60,7 @@ where `<secret>` is the value specified in the *app.json* file in the eth-net-in
 
 ## Receiving Stats From an Ethereum Node
 
-Follow the instructions for [installing and running The Ethereum Network Intelligence API](https://github.com/cubedro/eth-net-intelligence-api). Make sure to edit the `app.json` file with the appropriate information. In particular:
+Follow the instructions for [installing and running The Ethereum Network Intelligence API](https://github.com/ethereum/eth-net-intelligence-api). Make sure to edit the `app.json` file with the appropriate information. In particular:
 
 - Confirm the correct configuration for the `RPC_PORT` and `CONFIGURATION_PORT`. The defaults are `"8545"` and `"30303"` respectively.
 - `INSTANCE_NAME` is the name your Ethereum node appears as in the front end.
@@ -68,8 +68,3 @@ Follow the instructions for [installing and running The Ethereum Network Intelli
 - As mentioned earlier `WS_SECRET` needs to match the environmental variable provided when running `npm start`.
 
 The Ethereum Network Intelligence API should be run concurrently with the Ethereum client of your choice. More information on running Ethereum node can be found [here](http://www.ethdocs.org/en/latest/ethereum-clients/choosing-a-client.html#sec-clients).
-
-[travis-image]: https://travis-ci.org/cubedro/eth-netstats.svg
-[travis-url]: https://travis-ci.org/cubedro/eth-netstats
-[dep-image]: https://david-dm.org/cubedro/eth-netstats.svg
-[dep-url]: https://david-dm.org/cubedro/eth-netstats
