@@ -48,7 +48,7 @@ grunt all
 npm start
 ```
 
-see the interface at http://localhost:3000
+see the interface at http://localhost:8545
 
 In order to receive stats from running nodes the web socket password needs to be provided
 
@@ -64,7 +64,7 @@ Follow the instructions for [installing and running The Ethereum Network Intelli
 
 - Confirm the correct configuration for the `RPC_PORT` and `CONFIGURATION_PORT`. The defaults are `"8545"` and `"30303"` respectively.
 - `INSTANCE_NAME` is the name your Ethereum node appears as in the front end.
-- `WS_SERVER` is the IP address and port (3000 is default).
+- `WS_SERVER` is the IP address and port (8545 is default).
 - As mentioned earlier `WS_SECRET` needs to match the environmental variable provided when running `npm start`.
 
 The Ethereum Network Intelligence API should be run concurrently with the Ethereum client of your choice. More information on running Ethereum node can be found [here](http://www.ethdocs.org/en/latest/ethereum-clients/choosing-a-client.html#sec-clients).
